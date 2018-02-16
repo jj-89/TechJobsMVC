@@ -17,9 +17,8 @@ namespace TechJobs.Controllers
         //[Route("/Search/Results")]
         public IActionResult Results(string searchType, string searchTerm)
         {
-            List<Dictionary<string, string>> jobs = new List<Dictionary<string, string>>();
+            List<Dictionary<string, string>> jobs = new List<Dictionary<string, string>>()
 
-            //go to jobdata and get the data
             if (searchType.Equals("all"))
             {
                 jobs = JobData.FindByValue(searchTerm);
